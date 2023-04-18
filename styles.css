@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#newBook-btn {
+    padding: 12px 24px;
+    background-color: white;
+}
+
+h1, .form-container {
+    display: flex;
+    justify-content: center;
+}
