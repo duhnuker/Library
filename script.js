@@ -8,28 +8,36 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-    document.querySelector('#title').value;
-    document.querySelector('#author').value;
-    document.querySelector('#pages').value;
-    document.querySelector('#read').checked;
+    let title = document.querySelector('#title').value;
+    let author = document.querySelector('#author').value;
+    let pages = document.querySelector('#pages').value;
+    let read = document.querySelector('#read').checked;
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    console.log(myLibrary);
+}
+
+function display() {
+
 }
 
 let newBookBtn = document.querySelector('#newBook-btn');
-newBookBtn.addEventListener("click", function() {
+    newBookBtn.addEventListener("click", function() {
     let newBookForm = document.querySelector('#newBook-Form');
     newBookForm.style.display = "block";
 })
 
-let cancelBtn = document.querySelector('#cancel-btn');
-cancelBtn.addEventListener('click', function() {
-    cancelBtn.style.display = "none";
-})
 
-
-//submit button changed to add book to library instead of default back end send.//
-document.querySelector('newBook-Form').addEventListener('submit', function() {
+//submit button changed to add book to library instead of default back end send.
+document.querySelector('#newBook-Form').addEventListener('submit', function(event) {
     event.preventDefault();
     addBookToLibrary();
 })
+
+//Cancel/Hide Form
+    let cancelBtn = document.querySelector('#cancel-btn');
+    cancelBtn.addEventListener('click', function() {
+    let hideForm = document.querySelector('#newBook-Form');
+    hideForm.style.display = "none";
+})
+
