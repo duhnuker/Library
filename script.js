@@ -19,6 +19,8 @@ function addBookToLibrary() {
 
 function display() {
     let LibraryBook = document.querySelector('.myLibrary-container');
+        //prevent duplication of books being displayed
+        LibraryBook.innerHTML = "";
     for (i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
         let bookItem = document.createElement('div');
