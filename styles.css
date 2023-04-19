@@ -1,12 +1,5 @@
 .container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
 }
 
 #newBook-btn {
@@ -14,7 +7,30 @@
     background-color: white;
 }
 
-h1, .form-container {
+.container, .button-container, h1, .form-container, .myLibrary-container,
+.book-card, p {
     display: flex;
     justify-content: center;
+}
+
+.book-card {
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.myLibrary-container {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 4px;
 }

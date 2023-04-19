@@ -24,7 +24,14 @@ function display() {
     for (i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
         let bookItem = document.createElement('div');
-        bookItem.innerHTML = `<p class="books">${book.title}</p>`
+        bookItem.innerHTML = `
+        <div class="book-card">
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <p class="book-pages">${book.pages}</p>
+            <p class="book-read">${book.read}</p>
+        </div>
+        `;
         LibraryBook.appendChild(bookItem);
     }
 }
