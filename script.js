@@ -14,11 +14,17 @@ function addBookToLibrary() {
     let read = document.querySelector('#read').checked;
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
-    console.log(myLibrary);
+    display();
 }
 
 function display() {
-
+    let LibraryBook = document.querySelector('.myLibrary-container');
+    for (i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let bookItem = document.createElement('div');
+        bookItem.innerHTML = `<p class="books">${book.title}</p>`
+        LibraryBook.appendChild(bookItem);
+    }
 }
 
 let newBookBtn = document.querySelector('#newBook-btn');
