@@ -1,26 +1,67 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #37393A;
+}
+
 .container {
     flex-direction: column;
 }
 
-#newBook-btn {
-    padding: 12px 24px;
-    background-color: white;
+.newbutton-container {
+    background-color: #C7D3DD;
+    padding: 20px 0px 20px 0px;
 }
 
-.container, .button-container, h1, .form-container, .myLibrary-container,
-.book-card, p {
+#newBook-btn {
+    padding: 12px 24px;
+    background-color: #E8EEF2;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+h1 {
+    color: white;
+    padding: 20px 0px 20px 0px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+}
+
+.container, .newbutton-container, h1, .form-container, .myLibrary-container
+, p, h2 {
     display: flex;
     justify-content: center;
 }
 
 .book-card {
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 200px;
     height: 300px;
     border: 2px solid black;
     border-radius: 10px;
     padding: 30px;
     margin-top: 20px;
+    background-color: #C7D3DD;
+}
+
+.book-card-child {
+    background-color: #E8EEF2;
 }
 
 .myLibrary-container {
@@ -38,10 +79,19 @@ p, .removeBtn {
 
 .removeBtn {
     border-radius: 10px;
-    background-color: white;
+    background-color: #37393A;
+    color: white;
 }
 
 .removeBtn:hover {
     transition: 0.4s;
-    background-color: rgb(202, 5, 5);
+    background-color: #D6C9C9;
+    color: black;
+}
+
+.toggleRead-btn {
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid black;
 }
