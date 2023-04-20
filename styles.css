@@ -28,7 +28,7 @@
     justify-content: space-evenly;
 }
 
-p {
+p, .removeBtn {
     font-size: 1.1rem;
     font-weight: bold;
     border: 1px solid black;

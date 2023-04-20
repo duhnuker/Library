@@ -29,11 +29,18 @@ function display() {
             <p class="book-title">${book.title}</p>
             <p class="book-author">${book.author}</p>
             <p class="book-pages">${book.pages}</p>
-            <p class="book-read">${book.read}</p>
+            <p class="book-read">${book.read ? "Read" : "Not Read Yet"}</p>
+            <button class="removeBtn" onclick="removeBook(${i})">Remove</button>
         </div>
         `;
         LibraryBook.appendChild(bookItem);
     }
+}
+
+function removeBook(index) {
+    //use splice to remove item from array
+    myLibrary.splice(index, 1);
+    display();
 }
 
 let newBookBtn = document.querySelector('#newBook-btn');
