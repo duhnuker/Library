@@ -67,10 +67,3 @@ document.querySelector('#newBook-Form').addEventListener('submit', function(even
     addBookToLibrary();
 })
 
-//Cancel/Hide Form
-    let cancelBtn = document.querySelector('#cancel-btn');
-    cancelBtn.addEventListener('click', function() {
-    let hideForm = document.querySelector('#newBook-Form');
-    hideForm.style.display = "none";
-})
-
