@@ -75,12 +75,7 @@ input {
 }
 
 .container, .newbutton-container, h1, .form-container, .myLibrary-container
-, p, h2 {
-    display: flex;
-    justify-content: center;
-}
-
-.formContent-container {
+, p, h2, .formContent-container {
     display: flex;
     justify-content: center;
 }
