@@ -11,12 +11,14 @@
     
 <div class="container">
     <div class="newbutton-container">
-    <button id="newBook-btn">NEW BOOK</button>
+    <button id="newBook-btn">+ NEW BOOK</button>
     </div>
         <div class="form-container">
-            <form id="newBook-Form" style="display: none;">
+            <form id="newBook-Form" style="display: none;">      
                 <h1>Search Book</h1>
       
+            <div class="formContent-container">
+
                 <label for="title"></label>
                 <input type="text" id="title" placeholder="Title" required>
       
@@ -24,12 +26,15 @@
                 <input type="text" id="author" placeholder="Author" required>
 
                 <label for="pages"></label>
-                <input type="text" id="pages" placeholder="Pages" required>
+                <input type="number" min="0" id="pages" placeholder="Pages" required>
       
                 <label for="read">Read:</label>
                 <input type="checkbox" id="read">
     
                 <input class="addBook-btn" type="submit" value="Add Book">
+
+            </div>
+
         <h2>Library</h2>
             <div class="myLibrary-container">
 
@@ -38,6 +43,8 @@
             </form>
         </div>
 </div>
+
+<footer>GitHub@duhnuker</footer>
 
 <script src="script.js"></script>
 </body>
